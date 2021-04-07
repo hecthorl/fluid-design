@@ -1,13 +1,204 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+/* html::-webkit-scrollbar-thumb {
+   border-radius: 5px;
+} */
+
+@font-face {
+   src: url('./static/font/Poppins-Black.ttf') format('truetype');
+   font-family: Poppins;
+   font-weight: 900;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+   src: url('./static/font/Poppins-Bold.ttf') format('truetype');
+   font-family: Poppins;
+   font-weight: bold;
+}
+@font-face {
+   src: url('./static/font/Poppins-Medium.ttf') format('truetype');
+   font-family: Poppins;
+   font-weight: normal;
+}
+
+html {
+   font-family: Poppins;
+   font-weight: normal;
+   overflow-y: hidden;
+}
+
+a {
+   color: wheat;
+   text-decoration: none;
+}
+.a {
+   animation: 0.5s linear infinite alternate www;
+}
+.main {
+   background-color: black;
+   height: 100vh;
+}
+.about-container {
+   background-color: black;
+   padding: 1rem;
+   height: 100vh;
+}
+.about-container h1 {
+   color: white;
+   text-align: center;
+   font-size: 50px;
+}
+.about-desc {
+   color: white;
+   display: grid;
+   width: 100%;
+   height: 75vh;
+   grid-template-columns: 1fr;
+   align-items: center;
+   margin: 0 auto;
+}
+.about-desc p {
+   text-align: justify;
+   padding: 0 10px;
+}
+
+@keyframes www {
+   from {
+      transform: translateY(-30px);
+   }
+   to {
+      transform: translateY(0);
+   }
+}
+
+@media screen and (min-width: 700px) {
+   .about-desc {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+span {
+   height: 50px;
+}
+
+.newsletter-container {
+   height: 100vh;
+   background-color: black;
+   color: blanchedalmond;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   overflow-y: hidden;
+}
+.newsletter-container h1 {
+   margin-bottom: 30px;
+   font-size: 40px;
+   font-weight: 100;
+}
+.newsletter-container button {
+   border: 1px solid currentColor;
+   color: black;
+   background-color: whitesmoke;
+   display: block;
+   font-size: 20px;
+   width: 300px;
+   cursor: pointer;
+   margin: 20px auto;
+   padding: 10px;
+   outline: none;
+   transition: border 0.5s, background 0.5s, color 0.5s;
+}
+.newsletter-container button:hover {
+   border: 1px solid white;
+   background: black;
+   color: whitesmoke;
+}
+/* .btn-container {
+   align-items: center;
+} */
+#colosal-svg {
+   width: 800px;
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+}
+#colosal-svg path {
+   stroke: whitesmoke;
+   stroke-width: 2px;
+}
+#logo-svg {
+   width: 800px;
+   margin: 300px auto 0;
+   z-index: 20;
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin-right: auto;
+   margin-left: auto;
+}
+#logo-svg > path {
+   stroke: whitesmoke;
+   stroke-width: 2px;
+}
+.arrow-down {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   margin-bottom: 50px;
+   color: white;
+   text-align: center;
+   font-size: 50px;
+}
+
+.titan {
+   width: 80%;
+   margin: 0 auto;
+}
+
+#titan > path {
+   stroke-width: 2px;
+   stroke: white;
+}
+
+form {
+   background-color: white;
+   color: black;
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+}
+textarea {
+   resize: none;
+   width: 90%;
+   height: 200px;
+   margin: 10px auto 0;
+   border: 1px solid black;
+   padding: 5px;
+   font-size: 1.2rem;
+   font-family: Poppins;
+   outline: none;
+}
+input {
+   font-family: Poppins;
+   border: none;
+   border-bottom: 1px solid black;
+   padding-top: 5px;
+   margin-bottom: 5px;
+   outline: none;
+   height: 25px;
+   font-size: 1rem;
+}
+.inputs-cont {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   /* border: 1px solid red; */
 }
